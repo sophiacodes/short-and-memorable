@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Table /> correctly 1`] = `
+<table
+  className="table"
+>
+  <caption>
+    Caption this!
+  </caption>
+  <thead>
+    <tr>
+      <th>
+        Header 1
+      </th>
+      <th>
+        Header 2
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Key 1
+      </td>
+      <td>
+        Item 1
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Key 2
+      </td>
+      <td>
+        Item 2
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td
+        colSpan={2}
+      >
+        This is a footer
+      </td>
+    </tr>
+  </tfoot>
+</table>
+`;

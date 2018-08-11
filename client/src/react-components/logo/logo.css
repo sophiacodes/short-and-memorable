@@ -1,0 +1,33 @@
+h1.logo {
+    font-size: 4rem !important;
+    letter-spacing: -6px;
+}
+.title {
+    color: #363636;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.125;
+}
+.title:not(.is-spaced)+.subtitle {
+    margin-top: -1.5rem;
+}
+.title:not(:last-child), 
+.subtitle:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.subtitle {
+    color: #4a4a4a;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+.title, 
+.subtitle {
+    word-break: break-word;
+}
+.logo-left {
+    font-family: 'Raleway-ExtraBold';
+}
+.subtitle b {
+    font-family: 'Raleway-Bold';
+}

@@ -1,0 +1,45 @@
+.table {
+    display: block;
+    width: 500px;
+    overflow-y: scroll;
+    margin: 0 auto;
+    border-bottom: 1px solid #24b19d;
+    border-top: 1px solid #24b19d;
+    height: 365px;
+    padding-bottom: 36px;
+}
+.table thead {
+    position: absolute;
+    width: 500px;
+    background-color: #01d1b2;
+    border-bottom: 1px solid #24b19d;
+}
+.table thead,
+.table tfoot  {
+    font-family: 'Raleway-Bold';
+}
+.table thead th,
+.table tr td {
+    padding: 10px;
+    width: 100px;
+}
+.table thead th:first-child,
+.table tbody tr td:first-child {
+    text-align: left;
+    width: 400px;
+}
+.table tr:first-child td {
+    padding-top: 50px;
+}
+.table tfoot td {
+    text-align: right;
+}
+.table caption {
+    padding: 10px;
+    caption-side: bottom;
+    position: absolute;
+    border-top: 1px solid #24b19d;
+    top: 533px;
+    background-color: #01d1b2;
+    width: 480px;
+}

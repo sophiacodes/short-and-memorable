@@ -1,0 +1,35 @@
+.file-upload-button {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.file-upload-button + label {
+	cursor: pointer;
+}
+.file-upload-button + label {
+    background-color: #1a9280;
+    border: none;
+    display: inline-block;
+    padding: 20px;
+    color: #fff;
+    margin: 20px;
+    font-family: Raleway-ExtraLight;
+    font-size: 1.4em;
+    border-radius: 5%;
+}
+.file-upload-button:focus + label,
+.file-upload-button + label:hover {
+    background-color: #14675a;
+}
+.file-upload-button:focus + label {
+	outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.file-upload-button:disabled + label {
+    background-color: #aeb7b6;
+    color: #e0dfdf;
+    cursor: default;
+}

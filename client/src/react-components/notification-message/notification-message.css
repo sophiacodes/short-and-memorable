@@ -1,0 +1,15 @@
+.notification-message {
+    padding: 20px;
+    width: 480px;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+}
+.notification-message.error {
+    background-color: #ff0909;
+}
+.notification-message.success {
+    background-color: #008000;
+}
+.notification-message.info {
+    background-color: #265fff;
+}

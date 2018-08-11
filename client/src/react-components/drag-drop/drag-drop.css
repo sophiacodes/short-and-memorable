@@ -1,0 +1,22 @@
+.drag-drop-container {
+    background: #01dfbe url(../../assets/images/cloud-upload.png) no-repeat center 42%;
+    border: 5px dashed #ffffff;
+    border-radius: 5%;
+    display: block;
+    height: 400px;
+    margin: 0 auto;
+    width: 500px;
+    position: relative;
+}
+.drag-drop-container .drag-label {
+    font-family: Raleway-ExtraLight;
+    font-size: 1.4em;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 500px;
+}
+.drag-drop-container.loading {
+    background-image: url(../../assets/images/loading.svg);
+    background-size: 100px 100px;
+}

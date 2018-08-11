@@ -1,0 +1,27 @@
+.footer {
+    padding: 20px;
+}
+footer > div {
+    display: inline-block;
+}
+footer span {
+    color: #999999;
+    font-size: 0.75em;
+    display: block;
+    font-weight: lighter;
+    text-align: left;
+}
+footer .word-count {
+    font-size: 1.4em;
+    background: -webkit-linear-gradient(#eee, #00d1b2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron';
+}
+footer .uppercase {
+    text-transform: uppercase;
+}
+footer .app-details {
+    width: 80%;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "word-count",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "test": "cd client && npm test"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.5.0",
+    "express": "^4.16.2",
+    "express-http-proxy": "^1.2.0"
+  }
+}

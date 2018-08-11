@@ -1,0 +1,28 @@
+{
+  "name": "word-count",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^23.4.2",
+    "jest": "^23.5.0",
+    "jest-cli": "^23.5.0",
+    "react-test-renderer": "^16.4.2",
+    "sinon": "^6.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:5000/"
+}

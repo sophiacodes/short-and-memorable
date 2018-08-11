@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <NotificationMessage /> correctly 1`] = `
+<p
+  className="notification-message error"
+>
+  This is a notification message
+</p>
+`;

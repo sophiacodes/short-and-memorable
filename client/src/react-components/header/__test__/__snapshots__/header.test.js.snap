@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Header /> correctly 1`] = `
+<header
+  className="header"
+>
+  <h1
+    className="title logo"
+  >
+    <span
+      className="logo-left"
+    >
+      Open
+    </span>
+    Law
+  </h1>
+  <h2
+    className="subtitle"
+  >
+    Next generation 
+    <b>
+      smart
+    </b>
+     legal agreements.
+  </h2>
+</header>
+`;

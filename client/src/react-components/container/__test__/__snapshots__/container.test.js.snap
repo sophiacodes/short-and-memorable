@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders <Container> correctly 1`] = `
+<section
+  className="container"
+>
+  <p>
+    P element inside container test
+  </p>
+</section>
+`;

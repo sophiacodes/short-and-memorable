@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FileUploadButton> component to render correctly when disabled 1`] = `
+Array [
+  <input
+    className="file-upload-button"
+    disabled={true}
+    id="file-upload"
+    onChange={[Function]}
+    type="file"
+  />,
+  <label
+    htmlFor="file-upload"
+  >
+    Choose file
+  </label>,
+]
+`;
+
+exports[`<FileUploadButton> component to render correctly when undisabled 1`] = `
+Array [
+  <input
+    className="file-upload-button"
+    disabled={false}
+    id="file-upload"
+    onChange={[Function]}
+    type="file"
+  />,
+  <label
+    htmlFor="file-upload"
+  >
+    Choose file
+  </label>,
+]
+`;
