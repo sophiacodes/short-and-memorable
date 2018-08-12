@@ -8,18 +8,14 @@ Array [
     <span
       className="logo-left"
     >
-      Open
+      Short&
     </span>
-    Law
+    Memorable.
   </h1>,
   <h2
     className="subtitle"
   >
-    Next generation 
-    <b>
-      smart
-    </b>
-     legal agreements.
+    Word.
   </h2>,
 ]
 `;
