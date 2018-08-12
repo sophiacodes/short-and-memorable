@@ -1,13 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+import Enzyme, { shallow, mount, render } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import FileUploadButton from '../';
- 
-it('<FileUploadButton> component to render correctly when disabled', () => {
+
+Enzyme.configure({ adapter: new Adapter() });
+
+it('<FileUploadButton /> component to render correctly when disabled', () => {
     const props = {
-        className: "file-upload-button",
-        id: "file-upload",
         disabled: true,
-        onChange: jest.fn()
+        handleFile: jest.fn(),
+        fileUploadRef: jest.fn()
     };
     const tree = renderer
         .create(
@@ -17,12 +20,11 @@ it('<FileUploadButton> component to render correctly when disabled', () => {
     expect(tree).toMatchSnapshot();
 });
  
-it('<FileUploadButton> component to render correctly when undisabled', () => {
+it('<FileUploadButton /> component to render correctly when undisabled', () => {
     const props = {
-        className: "file-upload-button",
-        id: "file-upload",
         disabled: false,
-        onChange: jest.fn()
+        handleFile: jest.fn(),
+        fileUploadRef: jest.fn()
     };
     const tree = renderer
         .create(
@@ -30,4 +32,20 @@ it('<FileUploadButton> component to render correctly when undisabled', () => {
         )
         .toJSON();
     expect(tree).toMatchSnapshot();
+});
+
+it('<FileUploadButton /> component ensure handleFile.fn() can call prop', () => {
+    const props = {
+        disabled: true,
+        handleFile: jest.fn(),
+        fileUploadRef: jest.fn()
+    };
+    const wrapper = mount(
+      <FileUploadButton
+        {...props}
+      />);
+    wrapper.find(FileUploadButton).instance().handleFileSelection();
+
+    expect(wrapper.find('FileUploadButton').props().handleFile).toEqual(props.handleFile);
+    expect(props.handleFile).toHaveBeenCalledTimes(1);
 });

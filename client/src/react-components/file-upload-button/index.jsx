@@ -3,7 +3,7 @@ import './file-upload-button.css';
 
 class FileUploadButton extends Component {
     handleFileSelection = () => {
-        this.props.handleFile()
+        this.props.handleFile();
     }
     render() {
         return (

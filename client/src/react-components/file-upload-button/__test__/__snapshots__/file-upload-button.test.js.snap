@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FileUploadButton> component to render correctly when disabled 1`] = `
+exports[`<FileUploadButton /> component to render correctly when disabled 1`] = `
 Array [
   <input
     className="file-upload-button"
@@ -17,7 +17,7 @@ Array [
 ]
 `;
 
-exports[`<FileUploadButton> component to render correctly when undisabled 1`] = `
+exports[`<FileUploadButton /> component to render correctly when undisabled 1`] = `
 Array [
   <input
     className="file-upload-button"

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DragDrop> component to render correctly when loading 1`] = `
+exports[`<DragDrop /> component to render correctly when loading 1`] = `
 <div
   className="drag-drop-container "
   onDragEnter={[Function]}
@@ -15,7 +15,7 @@ exports[`<DragDrop> component to render correctly when loading 1`] = `
 </div>
 `;
 
-exports[`<DragDrop> component to render correctly when not loading 1`] = `
+exports[`<DragDrop /> component to render correctly when not loading 1`] = `
 <div
   className="drag-drop-container loading"
   onDragEnter={[Function]}
