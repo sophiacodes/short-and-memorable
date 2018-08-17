@@ -14,7 +14,7 @@ import '../assets/css/reset.css';
 import '../assets/css/fonts.css';
 import '../assets/css/app.css';
 
-class Result extends Component {
+export class Result extends Component {
   state = {
     data: {},
     headers: [
@@ -60,11 +60,11 @@ class Result extends Component {
     );
   }
 }
-const mapStateToProps = (appState) => {
-  return {
+const mapStateToProps = (appState) => ({
+  // return {
     uploadResponseData: appState.uploadResponseData
-  }
-}
+  // }
+});
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
   }, dispatch)

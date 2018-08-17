@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import {
   Header,
   Container,
@@ -21,7 +21,7 @@ const MESSAGES = {
   'FAILED': 'Upload failed! Please try again'
 };
 
-class App extends Component {
+export class App extends Component {
   state = { 
     showMessage: false,
     callInProgress: this.props.callInProgress
@@ -104,15 +104,11 @@ class App extends Component {
     );
   }
 }
-const mapStateToProps = (appState) => {
-  return {
+const mapStateToProps = (appState) => ({
     callInProgress: appState.callInProgress,
     uploadResponseData: appState.uploadResponseData
-  }
-}
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({
-    upload: Actions.upload
-  }, dispatch)
-}
+});
+const mapDispatchToProps = (dispatch) => ({
+    upload: (data) => dispatch(Actions.upload(data))
+});
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

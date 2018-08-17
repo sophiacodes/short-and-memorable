@@ -2,6 +2,7 @@ module.exports = {
     verbose: true,
     collectCoverage: true,
     collectCoverageFrom: [
+        "**/pages/*.js",
         "**/react-components/**/*.jsx",
         "**/js/**/*.js"
     ],

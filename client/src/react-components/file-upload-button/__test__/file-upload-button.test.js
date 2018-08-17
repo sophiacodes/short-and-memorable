@@ -34,7 +34,7 @@ it('<FileUploadButton /> component to render correctly when undisabled', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('<FileUploadButton /> component ensure handleFile.fn() can call prop', () => {
+it('<FileUploadButton /> component ensure handleFile.fn() can call parent prop', () => {
     const props = {
         disabled: true,
         handleFile: jest.fn(),
