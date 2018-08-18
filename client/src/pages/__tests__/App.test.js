@@ -7,23 +7,23 @@ import { App } from '../App';
 import * as Actions from '../../js/action-creators';
 
 import configureMockStore from 'redux-mock-store';
-import { wrap } from 'module';
 const mockStore = configureMockStore();
- 
+
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('<App /> Component', () => { 
 
-    let wrapper, store;
+    let wrapper, store, history;
 
     beforeEach(() => {
         const initialState = {
             callInProgress: false
         };
         store = mockStore(initialState);
+        history = { push: jest.fn() };
 
         wrapper = shallow(
-            <App store={store} />
+            <App store={store} history={history} />
         );
     });
 
@@ -52,6 +52,63 @@ describe('<App /> Component', () => {
                 text: 'Something went wrong!'
             }
         });
+        expect(wrapper.find('NotificationMessage').length).toEqual(1);
+    });
+
+    it('<App /> ensure page navigates to the result page if api status is completed', () => {
+        const mockData = { 
+            data: {
+                counts: {
+                    item1: 'Test 1',
+                    item2: 'Test 2',
+                    item3: 'Test 3'
+                },
+                totalCount: 3,
+                status: 'COMPLETED'
+            },
+            caption: 'Total word count: 3',
+            headers: ['Header 1', 'Header 2']
+        };
+        const wrapper = shallow(<App uploadResponseData={mockData.data} history={history} />);
+
+        wrapper.setProps({
+            uploadResponseData: mockData.data,
+            callInProgress: false
+        });
+        expect(history.push.mock.calls[0]).toEqual(['/result']);
+    });
+
+    it('<App /> ensure page display error message if api status returns failed', () => {
+        const mockData = { 
+            data: {
+                counts: {
+                    item1: 'Test 1',
+                    item2: 'Test 2',
+                    item3: 'Test 3'
+                },
+                totalCount: 3,
+                status: 'FAILED'
+            },
+            caption: 'Total word count: 3',
+            headers: ['Header 1', 'Header 2'],
+            MESSAGES: {
+                'INVALID' : 'Invalid file type! File types accepted (.txt, .rtf)',
+                'SUCCESS': 'Upload successful!',
+                'FAILED': 'Upload failed! Please try again'
+            }
+        };
+        const wrapper = shallow(<App uploadResponseData={mockData.data} history={history} />);
+
+        wrapper.setProps({
+            uploadResponseData: mockData.data,
+            callInProgress: false
+        })
+        wrapper.setState({ 
+            text: mockData.MESSAGES['FAILED'],
+            showMessage: true,
+            type: 'error'
+        });
+
         expect(wrapper.find('NotificationMessage').length).toEqual(1);
     });
 });
