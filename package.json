@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "body-parser": "^1.18.3",
-    "concurrently": "^3.5.0",
+    "concurrently": "^5.0.2",
     "express": "^4.16.2",
     "express-http-proxy": "^1.6.0"
   }
